@@ -17,8 +17,9 @@ const userRoutes = require("./routes/user");
 const fs = require("fs");
 
 // Création du dossier 'images' s'il n'existe pas //
-if (!fs.existsSync("images")) {
-  fs.mkdirSync("images");
+const imagesDir = path.join(__dirname, "Images");
+if (!fs.existsSync(imagesDir)) {
+  fs.mkdirSync(imagesDir, { recursive: true });
 }
 
 // Connexion au serveur MongoDB //
