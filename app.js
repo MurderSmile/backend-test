@@ -14,6 +14,13 @@ const postRoutes = require("./routes/post");
 
 const userRoutes = require("./routes/user");
 
+const fs = require("fs");
+
+// Création du dossier 'images' s'il n'existe pas //
+if (!fs.existsSync("images")) {
+  fs.mkdirSync("images");
+}
+
 // Connexion au serveur MongoDB //
 mongoose.set("strictQuery", false);
 mongoose
