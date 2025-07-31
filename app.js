@@ -14,9 +14,11 @@ const postRoutes = require("./routes/post");
 
 const userRoutes = require("./routes/user");
 
-// Creation repertoire 'Images' s'il n'existe pas //
 const fs = require("fs");
+
+// Creation repertoire 'Images' s'il n'existe pas //
 const imagesDir = path.join(__dirname, "images");
+
 if (!fs.existsSync(imagesDir)) {
   fs.mkdirSync(imagesDir, { recursive: true });
   console.log('Directory "images" created successfully.');
