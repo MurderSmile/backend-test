@@ -2,11 +2,6 @@ const Post = require("../models/post");
 const fs = require("fs");
 const { json } = require("express");
 
-// Vérification d'un répertoire Images //
-if (!fs.existsSync("Images")) {
-  fs.mkdirSync("Images");
-}
-
 //  Ajout d'un nouveau post  //
 exports.createPost = (req, res, next) => {
   try {
